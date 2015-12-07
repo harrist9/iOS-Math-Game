@@ -1,0 +1,13 @@
+PODS:
+  - AdColony (2.6.0)
+  - ChartboostSDK (6.1.0)
+
+DEPENDENCIES:
+  - AdColony
+  - ChartboostSDK
+
+SPEC CHECKSUMS:
+  AdColony: ab47c3e22be7843e08f90989381a222884be4a62
+  ChartboostSDK: 93c7ded3b581f9b321538f7d99148562399151c1
+
+COCOAPODS: 0.39.0
