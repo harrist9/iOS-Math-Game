@@ -14,7 +14,6 @@ public class Audio: NSObject, AVAudioPlayerDelegate {
     
     public var backgroundMusicPlayer: AVAudioPlayer?
     
-
     public func playBackgroundMusic() {
         
         let path = NSBundle.mainBundle().pathForResource("bg", ofType: "m4a")
@@ -52,7 +51,6 @@ public class Audio: NSObject, AVAudioPlayerDelegate {
                 }
             }
         }
-        
 }
 
 var gameSound = Audio()

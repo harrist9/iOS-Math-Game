@@ -169,12 +169,12 @@ class GameViewController: UIViewController {
     }
     
     func playcorrectSound(){
-        correctSound.volume = 0.075
+        correctSound.volume = 0.05
         correctSound.play()
     }
     
     func playwrongSound(){
-        wrongSound.volume = 0.075
+        wrongSound.volume = 0.05
         wrongSound.play()
     }
 
@@ -215,26 +215,26 @@ class GameViewController: UIViewController {
         currentLevel()
         firstNumber = Int(arc4random_uniform(9))
         secondNumber = Int(arc4random_uniform(9))
-        wrongAnswer1 = Int(arc4random_uniform(5))
-        wrongAnswer2 = Int(arc4random_uniform(11))
-        wrongAnswer3 = Int(arc4random_uniform(16))
+        wrongAnswer1 = Int(arc4random_uniform(10))
+        wrongAnswer2 = Int(arc4random_uniform(15))
+        wrongAnswer3 = Int(arc4random_uniform(20))
         question()
        
     }
     
     func currentLevel() {
-        if scoreCount < 25 {
+        if scoreCount < 50 {
             levelLbl.text = "Level: 1"
-        }else if scoreCount >= 50 && scoreCount < 20 {
+        }else if scoreCount >= 50 && scoreCount < 75 {
             levelLbl.text = "Level: 2"
             level = 2
-        }else if scoreCount >= 75 && scoreCount < 30 {
+        }else if scoreCount >= 75 && scoreCount < 150 {
             levelLbl.text = "Level: 3"
             level = 3
-        }else if scoreCount >= 150 && scoreCount < 40 {
+        }else if scoreCount >= 150 && scoreCount < 200 {
             levelLbl.text = "Level: 4"
             level = 4
-        }else if scoreCount >= 200 && scoreCount < 50 {
+        }else if scoreCount >= 200 && scoreCount < 300 {
             levelLbl.text = "Level: 5"
             level = 5
         }else if scoreCount >= 300 {
@@ -245,9 +245,9 @@ class GameViewController: UIViewController {
     
     func LogicCheck(){
         repeat{
-            wrongAnswer3 = Int(arc4random_uniform(18))
-            wrongAnswer2 = Int(arc4random_uniform(14))
-            wrongAnswer1 = Int(arc4random_uniform(18))
+            wrongAnswer3 = Int(arc4random_uniform(10))
+            wrongAnswer2 = Int(arc4random_uniform(15))
+            wrongAnswer1 = Int(arc4random_uniform(20))
         }while wrongAnswer1 == wrongAnswer2 || wrongAnswer1 == wrongAnswer3 || wrongAnswer2 == wrongAnswer3 && wrongAnswer1 == answer || wrongAnswer2 == answer || wrongAnswer3 == answer
     }
     
@@ -372,6 +372,7 @@ class GameViewController: UIViewController {
             NSUserDefaults.standardUserDefaults().synchronize()
         }
         
+        userStarAchievements.updateAchievements()
         performSegueWithIdentifier("AdView", sender: nil)
     }
     

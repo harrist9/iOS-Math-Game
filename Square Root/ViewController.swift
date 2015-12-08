@@ -85,7 +85,9 @@ func application(application: UIApplication, didFinishLaunchingWithOptions launc
 //Actions
     
     @IBAction func leaderboardBtnPressed(sender: AnyObject) {
-         GCHelper.sharedInstance.showGameCenter(self, viewState: .Achievements)
+        userStarAchievements.updateAchievements()
+        GCHelper.sharedInstance.showGameCenter(self, viewState: .Leaderboards)
+         //GCHelper.sharedInstance.showGameCenter(self, viewState: .Achievements)
     }
    
     @IBAction func rateUsBtnPressed(sender: AnyObject){
@@ -98,6 +100,7 @@ func application(application: UIApplication, didFinishLaunchingWithOptions launc
         super.viewDidAppear(animated)
         self.updateDefaults()
         Chartboost.showInterstitial(CBLocationHomeScreen)
+        
 
     }
     

@@ -30,6 +30,7 @@
 		E92807A41C054F6A009B00B4 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E92807A31C054F6A009B00B4 /* StoreKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		E92807A61C054F76009B00B4 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E92807A51C054F76009B00B4 /* SystemConfiguration.framework */; };
 		E92807A81C054F7D009B00B4 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E92807A71C054F7D009B00B4 /* WebKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		E94953681C15CAF3004BE80F /* StarAchievements.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94953671C15CAF3004BE80F /* StarAchievements.swift */; };
 		E95A87F11C0155FD00435354 /* correct.m4a in Resources */ = {isa = PBXBuildFile; fileRef = E95A87F01C0155FD00435354 /* correct.m4a */; };
 		E98A03711C0298D40024CA0F /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E98A03701C0298D40024CA0F /* GameKit.framework */; };
 		E98A03731C02AC870024CA0F /* GCHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98A03721C02AC870024CA0F /* GCHelper.swift */; };
@@ -90,6 +91,7 @@
 		E92807A31C054F6A009B00B4 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		E92807A51C054F76009B00B4 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		E92807A71C054F7D009B00B4 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		E94953671C15CAF3004BE80F /* StarAchievements.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarAchievements.swift; sourceTree = "<group>"; };
 		E95A87F01C0155FD00435354 /* correct.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = correct.m4a; sourceTree = "<group>"; };
 		E98A03701C0298D40024CA0F /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		E98A03721C02AC870024CA0F /* GCHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GCHelper.swift; sourceTree = "<group>"; };
@@ -223,6 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				E9B936D01C0803DC007B019B /* Constants.swift */,
+				E94953671C15CAF3004BE80F /* StarAchievements.swift */,
 			);
 			name = Constants;
 			sourceTree = "<group>";
@@ -492,6 +495,7 @@
 				E9B936D11C0803DC007B019B /* Constants.swift in Sources */,
 				E9BF19DD1BFEA5AC00EA340C /* ViewController.swift in Sources */,
 				E9BF19E61BFEB17500EA340C /* GameViewController.swift in Sources */,
+				E94953681C15CAF3004BE80F /* StarAchievements.swift in Sources */,
 				E91539361C0D00E400DF2E48 /* AdViewController.swift in Sources */,
 				E90653FD1C0A915800D05A65 /* GameOverViewController.swift in Sources */,
 				E9BF19AC1BFEA55D00EA340C /* AppDelegate.swift in Sources */,

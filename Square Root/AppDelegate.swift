@@ -15,48 +15,43 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AdColonyDelegate, Chartbo
     var window: UIWindow?
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        
     //Starts Background Music
 
        gameSound.playBackgroundMusic()
-        
+
     //Initialize Defaults
         
         if let starTotal = NSUserDefaults.standardUserDefaults().valueForKey("starTotal") as? Int {
-            print("Total Stars is: \(starTotal)")
+           print("Total Stars is: \(starTotal)")
         }else {
-            print("setting Default value for starTotal")
+            //print("setting Default value for starTotal")
             NSUserDefaults.standardUserDefaults().setValue(0, forKey: "starTotal")
         }
         
         if let highScore = NSUserDefaults.standardUserDefaults().valueForKey("highScore") as? Int {
            print("The Current HighScore is: \(highScore)")
         }else {
-            print("setting Default value for highScore")
+           // print("setting Default value for highScore")
             NSUserDefaults.standardUserDefaults().setValue(0, forKey: "highScore")
         }
         
         if let heartsTotalCount = NSUserDefaults.standardUserDefaults().valueForKey("heartsTotal") as? Int {
-            print("Total Hearts are:  \(heartsTotalCount)")
+           print("Total Hearts are:  \(heartsTotalCount)")
         }else {
-           print("setting Default value for hearts")
+          // print("setting Default value for hearts")
            NSUserDefaults.standardUserDefaults().setValue(3, forKey: "heartsTotal")
         }
         
-        
     //Initialize the Chartboost Library
         
-       
-      //  Chartboost.startWithAppId(<#T##appId: String!##String!#>, appSignature: <#T##String!#>, delegate: <#T##ChartboostDelegate!#>)
         Chartboost.startWithAppId("56623c38f789821a55aa585d", appSignature: "1dc259b4d3589a26d5b36583bef6b504ff3e32df", delegate: self)
         Chartboost.setShouldRequestInterstitialsInFirstSession(false)
         
     //Configure AdColony once on app launch
         
         AdColony.configureWithAppID(Constants.adcolonyAppID, zoneIDs: [Constants.adcolonyZoneID, "vz5a4a799e29cd49e0a2", "vza057a8716d0c4f2d9b"], delegate: self, logging: true)
-        
-        
-        
-        
+
         return true
         
     }
